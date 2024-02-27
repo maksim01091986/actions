@@ -26,27 +26,39 @@ jobs:
         echo "Hello Message1"
         echo "Application name is: ${{env.APPLICATION_NAME}}"
    
-    - name: List current folder
-      run: ls -la
-    
     - name: Git clone my repo
-      uses: actions/checkout@v4     
+      uses: actions/checkout@v4
+      
+    - name: List current folder
+      run: ls -la     
 
   my-deploy:
     runs-on: ubuntu-latest
     needs: [my-testing]
+    env:
+      VAR1: "This is Job Level Variable 1"
+      VAR2: "This is Job Level Variable 2"
     
     steps:
     - name: Print Hello Message in Deploy
-      run: echo "Hello World from Deploy job"
+      run: echo "Hello World from Deploy job
 
-    - name: Printing Deplyment packee
+    - name: Print ENV vars
+      run: |
+        echo "Var1 = ${{env.VAR1}}
+        echo "Var2 = ${{env.VAR2}}
+        echo "Var3 = $LOCAL_VAR
+      env:
+        LOCAL_VAR: " This is super Local variable"
+
+
+    - name: Printing Deplyment package
       run: echo "Deploy package name is ${{env.DEPLOY_PACKAGE_NAME}}"
 
     - name: Lets test some packeges if the are here 1
       run: aws --version
 
     - name: Lets test some packeges if the are here 2
-      run: zip
+      run: zip --version
     
     
