@@ -1,5 +1,6 @@
 # actions
 
-!(https://github.com/maksim01091986/actions/actions/workflows/My-GitHub-Action-Basics/badge.svg)
+![example workflow](https://github.com/maksim01091986/actions/actions/workflows/my-basics.yml/badge.svg)
+
 
 
