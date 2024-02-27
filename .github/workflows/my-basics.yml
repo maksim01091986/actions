@@ -1,0 +1,28 @@
+# -------------------------------------------------
+# GitHub Actions Test
+#
+# Copyleft (c) by Maksimus  
+#--------------------------------------------------
+name: My-GitHub-Action-Basics
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  my-testing:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Print Hello Message
+      run: echo "Hello World"
+      
+
+  my-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Print Hello Message
+      run: echo "Hello World"
+    
+    
