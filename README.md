@@ -1,3 +1,3 @@
 # actions
 
-!(https://avatars.mds.yandex.net/i?id=783614a3f190bc71c1a444295e997c863e06483c-10705627-images-thumbs&n=13)
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
