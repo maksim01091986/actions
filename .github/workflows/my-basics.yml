@@ -3,7 +3,7 @@
 #
 # Copyleft (c) by Maksimus  
 #--------------------------------------------------
-name: My-GitHub-Action-Basics
+name: CI
 env:
    APPLICATION_NAME       : "MyFlask"
    DEPLOY_PACKAGE_NAME    : "flask-deploy-version-${{ github.sha }}"
@@ -14,7 +14,7 @@ on:
       - master
 jobs:
   my-testing:
-    runs-on: ubuntu-latestxx
+    runs-on: ubuntu-latest
     
     steps:
     - name: Print variable CI
