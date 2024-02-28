@@ -7,7 +7,6 @@ name: My-GitHub-Action-Basics
 env:
    APPLICATION_NAME       : "MyFlask"
    DEPLOY_PACKAGE_NAME    : "flask-deploy-version-${{ github.sha }}"
-   VAR                    : CI
 
 on:
   push:
@@ -19,7 +18,7 @@ jobs:
     
     steps:
     - name: Print variable CI
-      run: echo "${{env.VAR}}"
+      run: echo $GITHUB_JOB
       
     - name: Print Hello Message in Testing
       run: echo "Hello World from Testing job"
