@@ -18,7 +18,7 @@ jobs:
     
     steps:
     - name: Print variable CI
-      run: ${{CI}}
+      run: echo ${{CI}}
       
     - name: Print Hello Message in Testing
       run: echo "Hello World from Testing job"
