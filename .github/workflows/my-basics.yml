@@ -14,7 +14,7 @@ on:
       - master
 jobs:
   my-testing:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latestxx
     
     steps:
     - name: Print variable CI
